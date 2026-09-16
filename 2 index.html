@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointment Booking</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111;
+}
+
+.booking-section{
+    min-height:100vh;
+    background:url('spa-bg.jpg') center center/cover no-repeat;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:50px;
+    position:relative;
+}
+
+.booking-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+        /* background-image:url(./hero\ 2.webp); */
+}
+
+.booking-container{
+    position:relative;
+    z-index:2;
+    width:600px;
+    color:#fff;
+}
+
+.subtitle{
+    color:#c9a54c;
+    font-size:38px;
+    font-family:cursive;
+}
+
+.title{
+    font-size:52px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.description{
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:40px;
+    color:#f5f5f5;
+}
+
+.booking-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.form-group{
+    position:relative;
+}
+
+.form-group.full{
+    grid-column:1 / -1;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid rgba(255,255,255,0.4);
+    color:#fff;
+    padding:12px 0;
+    font-size:16px;
+    outline:none;
+}
+
+textarea{
+    min-height:120px;
+    resize:none;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#ddd;
+}
+
+.btn{
+    margin-top:20px;
+    background:#c9a54c;
+    color:#fff;
+    border:none;
+    padding:15px 35px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#b08e3b;
+}
+
+a{
+  list-style-type:none;
+}
+
+@media(max-width:768px){
+
+    .booking-section{
+        justify-content:center;
+        padding:25px;
+    }
+
+    .booking-container{
+        width:100%;
+    }
+
+    .booking-form{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="booking-section">
+    <div class="booking-container">
+
+        <h3 class="subtitle">Appointment</h3>
+        <h1 class="title"><a href="./2 index.html">Book Now</a></h1>
+
+        <p class="description">
+            Experience the best-in-class Reflexology Services at Foot Relief
+        </p>
+
+        <form class="booking-form">
+
+            <div class="form-group">
+                <input type="text" placeholder="Name*" required>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" placeholder="Phone Number*" required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" placeholder="Email Address*" required>
+            </div>
+
+            <div class="form-group">
+                <select required>
+                    <option value="">Select a Service</option>
+                    <option>Foot Reflexology</option>
+                    <option>Body Massage</option>
+                    <option>Spa Therapy</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select>
+                    <option>Select City</option>
+                    <option>New York</option>
+                    <option>Chicago</option>
+                    <option>Los Angeles</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="date">
+            </div>
+
+            <div class="form-group full">
+                <textarea placeholder="Write a Message"></textarea>
+            </div>
+
+            <div class="form-group full">
+                <button type="submit" class="btn"><a href="./index.html">Book Now</a></button>
+            </div>
+
+        </form>
+
+    </div>
+</section>
+
+</body>
+</html> 
+
